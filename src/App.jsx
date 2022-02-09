@@ -11,10 +11,8 @@ export default function App() {
 
   return (
     <div className="App">
-      {/* if list.length is empty show Welcome else show ShoppingScreen */}
-      {/* is is list.length equal 0? */}
-      {/* Ternary operation ?: */}
-      {list.length === 0 ? <WelcomeScreen /> : <ShoppingScreen />}
+      {list.length === 0 && <WelcomeScreen list={list} setList={setList} />}
+      {list.length > 0 && <ShoppingScreen list={list} setList={setList} />}
     </div>
   );
 }

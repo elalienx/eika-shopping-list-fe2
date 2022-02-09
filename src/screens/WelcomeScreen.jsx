@@ -1,4 +1,16 @@
-export default function WelcomeScreen() {
+export default function WelcomeScreen({ list, setList }) {
+  function createItem() {
+    const newItem = {
+      id: list.length,
+      name: "sofa",
+      price: 500,
+      imageURL: "",
+      isCompleted: false,
+    };
+
+    setList((list) => [...list, newItem]);
+  }
+
   return (
     <div>
       <img src="" alt="A background with a  circle with works EIKA inside" />
@@ -13,7 +25,7 @@ export default function WelcomeScreen() {
         the name and the price of the item you want to add. You can also and an
         image after the item is added by touching the camera icon.
       </p>
-      <button>Add item</button>
+      <button onClick={createItem}>Add item</button>
     </div>
   );
 }
