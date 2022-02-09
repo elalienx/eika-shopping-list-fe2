@@ -1,11 +1,11 @@
-export default function TaskItem({ item }) {
-  function onCheckbox() {
-    console.log("TaskItem.jsx id", item.id);
-  }
-
+export default function TaskItem({ item, onChecbox }) {
   return (
     <li>
-      <input type="checkbox" checked={item.isCompleted} onChange={onCheckbox} />
+      <input
+        type="checkbox"
+        checked={item.isCompleted}
+        onChange={() => onChecbox(item.id)}
+      />
       {item.name}, {item.price}:-
     </li>
   );
