@@ -1,10 +1,6 @@
-export default function TaskItem({ item, list, setList }) {
+export default function TaskItem({ item }) {
   function onCheckbox() {
-    const clonedList = [...list];
-    const editedItem = clonedList[item.id];
-    editedItem.isCompleted = false;
-
-    setList((list) => [...list, editedItem]);
+    console.log("TaskItem.jsx id", item.id);
   }
 
   return (
