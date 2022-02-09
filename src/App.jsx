@@ -1,5 +1,5 @@
 // NPM packages
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // Project files
 import Modal from "./components/Modal";
@@ -12,6 +12,10 @@ export default function App() {
   const [showModal, setShowModal] = useState(false);
 
   // Methods
+  useEffect(() => {
+    localStorage()
+  }, []);
+
   function onAddItem(name, price) {
     const newItem = {
       id: list.length,
