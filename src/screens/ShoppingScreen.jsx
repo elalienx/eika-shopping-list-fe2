@@ -1,11 +1,12 @@
 // Project files
 import TaskList from "../components/TaskList";
 
-export default function ShoppingScreen({ list, setList }) {
+export default function ShoppingScreen({ list, setShowModal }) {
   return (
     <div>
       <h1>Shopping list</h1>
-      <TaskList list={list} setList={setList} />
+      <TaskList list={list} />
+      <button onClick={() => setShowModal(true)}>Add item</button>
     </div>
   );
 }

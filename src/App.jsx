@@ -12,11 +12,11 @@ export default function App() {
   const [showModal, setShowModal] = useState(false);
 
   // Methods
-  function onAddItem(item) {
+  function onAddItem(name, price) {
     const newItem = {
       id: list.length,
-      name: item.name,
-      price: item.price,
+      name: name,
+      price: price,
       imageURL: "",
       isCompleted: false,
     };

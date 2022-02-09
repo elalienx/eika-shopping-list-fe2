@@ -3,14 +3,17 @@ import { useState } from "react";
 
 export default function Modal({ showModal, setShowModal, onAddItem }) {
   // Local state
-  const [name, setName] = useState();
-  const [price, setPrice] = useState();
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
 
   // Methods
   function onSubmit(event) {
     event.preventDefault();
 
     onAddItem(name, price);
+    setName("");
+    setPrice("");
+    setShowModal(false);
   }
 
   function onCancel() {
