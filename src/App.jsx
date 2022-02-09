@@ -45,7 +45,7 @@ export default function App() {
     const index = clonedList.findIndex((item) => item.id === id);
     const item = clonedList[index];
 
-    item.isCompleted = !item.isCompleted;
+    // item.isCompleted === !item.isCompleted;
     setList(clonedList);
   }
 
