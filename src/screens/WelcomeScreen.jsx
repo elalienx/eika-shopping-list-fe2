@@ -5,7 +5,7 @@ export default function WelcomeScreen({ list, setList }) {
       name: "sofa",
       price: 500,
       imageURL: "",
-      isCompleted: false,
+      isCompleted: true,
     };
 
     setList((list) => [...list, newItem]);
